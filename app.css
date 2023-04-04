@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 100vw;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.error {
+    color: red;
+    font-size: 15px;
+}
+
+.movies-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin: 5rem;
+}
+
+.movie-cartel {
+    position: relative;
+}
+
+.movie-info {
+    background-color: rgb(19, 43, 74);
+    color: rgb(87, 129, 169);
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 4.5rem;
+    font-size: 0.8rem;
+    padding: 5px;
+    font-weight: bold;
+    left: 0;
+    bottom: 0;
+}
+
+
+.movies-grid li img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.search-form input[type=text] {
+    width: 30%;
+}
+
+.search-form input[type=checkbox] {
+    display: none;
+}
+
+.search-form label {
+    background-color: #0c151c;
+    padding: 10px 30px;
+    border-radius: 7px;
+    text-align: center;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.search-form button~input:checked~label {
+    background-color: rgb(21, 95, 21);
+}
+
+.no-results-movie {
+    margin: 3%;
+    font-size: 90%;
+}
+
+.no-results-movie img {
+    object-fit: contain;
+    width: 40%;
+    height: 80%;
+}
+
+.loader {
+    width: 68px;
+    height: 68px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    margin: 10%;
+
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+header h1 {
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+}
+
+h1 span {
+    color: blue;
+}
